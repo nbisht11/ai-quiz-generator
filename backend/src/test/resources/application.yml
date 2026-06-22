@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: quiz-generator
+  ai:
+    openai:
+      api-key: test-gemini-key
+      # Point the OpenAI client to the Gemini compatibility endpoint
+      base-url: https://generativelanguage.googleapis.com/v1beta/openai/
+      chat:
+        options:
+          # Specify the Gemini model you want to use (e.g., gemini-2.0-flash, gemini-1.5-pro)
+          model: gemini-3.1-flash-lite
+
+app:
+  config:
+    prompt-path: classpath:prompts/generate_quiz_prompt.yml
+    default-username: user
+    default-password: password
+    secret-key: mysupersecretkey
