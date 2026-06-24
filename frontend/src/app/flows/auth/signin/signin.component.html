@@ -1,0 +1,19 @@
+<div class="sign-in-container">
+    <h2>Enter Passcode</h2>
+    <div class="card-content">
+        <div class="icon">🔐</div>
+        <form (ngSubmit)="signIn()">
+            <input
+              type="password"
+              placeholder="Enter passcode"
+              [(ngModel)]="passcode"
+              name="passcode"
+              required
+            />
+            <button type="submit">Verify</button>
+          </form>
+    </div>
+    @if(error) {
+      <p class="error">{{ error }}</p>
+    }    
+</div>

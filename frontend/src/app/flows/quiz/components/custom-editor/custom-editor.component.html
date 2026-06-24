@@ -1,0 +1,17 @@
+<form [formGroup]="inputForm" (ngSubmit)="submitResponse()">
+	<editor formControlName="inputValue" [init]="init" licenseKey="gpl"></editor>
+
+	<div *ngIf="inputValue?.invalid && inputValue?.dirty" class="error">
+		<p *ngIf="inputValue?.errors?.['required']">This field is required.</p>
+	</div>
+
+	<div class="button-container">
+		<button
+			type="submit"
+			[disabled]="inputForm.invalid"
+			class="submit-button"
+		>
+			Submit
+		</button>
+	</div>
+</form>
