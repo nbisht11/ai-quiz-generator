@@ -1,0 +1,155 @@
+.card-container {
+  .card {
+    .question {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .input-field-container {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 0;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      resize: vertical;
+      box-sizing: border-box;
+      text-align: left;
+      height: 400px;
+    }
+
+    .character-count {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .question {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .options label {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .options input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .options input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .options label:hover {
+    background-color: #f0f4ff;
+    border-color: #5585ff;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .navigation button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3366cc;
+    color: #fff;
+    transition: background 0.2s ease;
+  }
+  
+  .navigation button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .navigation button:hover:not(:disabled) {
+    background-color: #254c9a;
+  }
+  
+  .result, .reason {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f8f5;
+    border: 1px solid #d4edda;
+    color: #155724;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+  
+  .reason.invalid {
+    border: 1px solid #de1619;
+    background-color: #ffc9c4;
+    color: black;
+  }
+
+  .options label.correct-answer {
+    border: 2px solid #28a745;
+    background-color: #e6f4ea;
+  }
+  
+  .options label.incorrect-answer {
+    border: 2px solid #de1619 ;
+    background-color: #fdecea;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }

@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>Quiz Generation</h1>
+
+	<div class="form-group full-width">
+		<label for="learning-objective">Enter or paste your text below:</label>
+	</div>
+	<app-custom-editor (data)="getQuestions($event)"></app-custom-editor>
+</div>
+<div *ngIf="showQuiz">
+	<app-quiz-modal
+	  [questions]="questions"
+	  (closeQuiz)="closeQuizPopup($event)">
+	</app-quiz-modal>
+</div>
+<div *ngIf="showLoader" class="loader-container">
+	<app-loading-spinner [loadingMessage]="loadingSpinnerMessage" />
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+	<app-error-message [errorMessage]="errorMessage" (closeErrorMessage)="closeErrorMessagePopup()"></app-error-message>
+</div>
+
+<div *ngIf="showPopup">
+	<app-popup [message]="popupMessage" (close)="closePopup()" ></app-popup>
+</div>

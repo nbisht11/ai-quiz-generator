@@ -1,0 +1,43 @@
+<div id="quizModal" class="modal">
+    <div class="modal-content">
+      <button class="close-button" (click)="closeQuizPopup()">x</button>
+      <h2>Multiple Choice Quiz</h2>
+  
+      <div *ngIf="showQuestions">
+        <form [formGroup]="assessmentForm">
+          <div id="quizContainer">
+            <div class="question">{{ currentQuestion.question }}</div>
+            <div class="options">
+              <label *ngFor="let option of currentQuestion.options"
+              [ngClass]="{
+                'correct-answer': showReason && currentQuestion.correctAnswer === option.optionLabel,
+                'incorrect-answer': showReason && currentAnswer === option && currentAnswer !== currentQuestion.correctAnswer
+              }">
+                {{ option.optionLabel }}.
+                <input type="radio" formControlName="answer" [value]="option.optionLabel">
+                <span [innerHTML]="option.optionValue"></span>
+              </label>
+            </div>
+  
+            <div class="navigation">
+                <button id="prevBtn" (click)="prevQuestion()" [disabled]="disablePrevButton">Previous</button>
+                <button id="nextBtn" (click)="nextQuestion()" [disabled]="disableNextButton">{{nextButtonName}}</button>
+            </div>
+  
+            <div *ngIf="showReason" class="reason" [class.invalid]="currentAnswer !== currentQuestion.correctAnswer" id="reasonContainer">
+              {{ reason }}
+            </div>
+          </div>
+        </form>
+      </div>
+  
+      <div *ngIf="showResult">
+        <div class="result" [innerHTML]="result"></div>
+        <div class="navigation">
+            <button *ngIf="showTryAgainButton" id="tryAgainBtn" (click)="tryAgain()">Try Again</button>
+            <button *ngIf="!showTryAgainButton" id="closeBtn" (click)="closeQuizPopup()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
