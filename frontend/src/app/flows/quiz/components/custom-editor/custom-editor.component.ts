@@ -10,7 +10,7 @@ import { TINYMCE_OPTIONS } from '../../constants/quiz.constant';
   templateUrl: './custom-editor.component.html',
   styleUrl: './custom-editor.component.scss',
   providers: [
-    { provide: TINYMCE_SCRIPT_SRC, useValue: '/tinymce/tinymce.min.js' }
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
   ]
 })
 export class CustomEditorComponent {
