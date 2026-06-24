@@ -1,0 +1,1 @@
+import{b as o}from"./chunk-V76XY3A6.js";import"./chunk-IA4XXRME.js";import"./chunk-2NFLSA4Y.js";var r=[{path:"",loadComponent:()=>import("./chunk-27UQ3RDY.js").then(e=>e.QuizBuilderComponent),providers:[o]}];export{r as QUIZ_ROUTES};
