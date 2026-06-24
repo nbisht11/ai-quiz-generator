@@ -39,7 +39,7 @@ export class CustomEditorComponent {
     elementpath: false,
     statusbar: false,
     plugins: TINYMCE_OPTIONS.PLUGINS,
-    base_url: '/tinymce',
+    base_url: 'https://nbisht11.github.io/ai-quiz-generator/tinymce',
     suffix: '.min',
     toolbar: TINYMCE_OPTIONS.TOOLBAR,
     fontsize_formats: '12px 13px 14px 15px 16px 18px 24px 36px',
