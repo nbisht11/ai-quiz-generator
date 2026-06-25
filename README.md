@@ -126,7 +126,7 @@ If you want to run this project locally, follow the steps below.
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://nbisht11.github.io/ai-quiz-generator/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/nbisht11/ai-quiz-generator/issues).
 
 ## 📝 License
 
